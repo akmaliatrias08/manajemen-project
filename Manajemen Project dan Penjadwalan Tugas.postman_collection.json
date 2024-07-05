@@ -1,0 +1,1100 @@
+{
+	"info": {
+		"_postman_id": "ce9a5b67-2962-4321-95ac-fb00abc592b4",
+		"name": "Manajemen Project dan Penjadwalan Tugas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21740135"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Get All Project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/projects"
+					},
+					"response": [
+						{
+							"name": "(200) Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:5000/projects"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"success\",\n    \"data\": [\n        {\n            \"_id\": \"66885c718952c51abf49117c\",\n            \"name\": \"Project 1\",\n            \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat\",\n            \"createdAt\": \"2024-07-05T20:49:53.415Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One Project By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66885c718952c51abf49117c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "(200) Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/projects/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"success\",\n    \"data\": {\n        \"_id\": \"66885c718952c51abf49117c\",\n        \"name\": \"Project 1\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat\",\n        \"createdAt\": \"2024-07-05T20:49:53.415Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "(404) Data Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/projects/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"data not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Project 3\",\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/projects"
+					},
+					"response": [
+						{
+							"name": "(200) Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Project 4\",\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/projects"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"message\": \"success create\",\n    \"data\": {\n        \"name\": \"Project 1\",\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat\",\n        \"_id\": \"66885c718952c51abf49117c\",\n        \"createdAt\": \"2024-07-05T20:49:53.415Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "(400) Name Is Required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"\",\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/projects"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"name is required\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Project By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Project 2\",\r\n    \"description\": \"Desc ...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66885d94d1d575f565125cc2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "(200) Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Project 1\",\r\n    \"description\": \"Desc ...\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/projects/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"success update\",\n    \"data\": {\n        \"_id\": \"66885d94d1d575f565125cc2\",\n        \"name\": \"Project 2\",\n        \"description\": \"Desc ...\",\n        \"createdAt\": \"2024-07-05T20:54:44.770Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "(400) Name Is Required",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Project 1\",\r\n    \"description\": \"Desc ...\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/projects/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"name is required\"\n}"
+						},
+						{
+							"name": "(404) Data Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Project 1\",\r\n    \"description\": \"Desc ...\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/projects/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"data not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Project By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66885e15d1d575f565125cc7"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "(200) Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/projects/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66881cbb5741ccea2330aad1"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"success delete\"\n}"
+						},
+						{
+							"name": "(404) Data Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/projects/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66881cbb5741ccea2330aad1"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 404,\n    \"message\": \"data not found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Projects Tasks",
+			"item": [
+				{
+					"name": "Create Tasks By Project Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Task 10\",\r\n    \"description\": \"Finish the quarterly report by the end of the year.\",\r\n    \"startTime\": \"2024-07-12 09:00\",\r\n    \"endTime\": \"2024-07-12 10:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/projects/:project_id/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"projects",
+								":project_id",
+								"tasks"
+							],
+							"variable": [
+								{
+									"key": "project_id",
+									"value": "66885c718952c51abf49117c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "(200) Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Task 2\",\r\n    \"description\": \"Finish the quarterly report by the end of the year.\",\r\n    \"startTime\": \"2024-07-12 08:00\",\r\n    \"endTime\": \"2024-07-12 09:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/projects/:project_id/tasks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":project_id",
+										"tasks"
+									],
+									"variable": [
+										{
+											"key": "project_id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"message\": \"success create\",\n    \"data\": {\n        \"projectId\": \"668815c9bfce5f7bebe80c10\",\n        \"title\": \"Task 2\",\n        \"description\": \"Finish the quarterly report by the end of the year.\",\n        \"startTime\": \"2024-07-12T01:00:00.000Z\",\n        \"endTime\": \"2024-07-12T02:00:00.000Z\",\n        \"_id\": \"6688463c40820db785c6d784\",\n        \"createdAt\": \"2024-07-05T19:15:08.230Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "(400) Task startTime and endTime in the same project is exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Task 1\",\r\n    \"description\": \"Finish the quarterly report by the end of the year.\",\r\n    \"startTime\": \"2024-07-10 17:00\",\r\n    \"endTime\": \"2024-07-10 18:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/projects/:project_id/tasks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":project_id",
+										"tasks"
+									],
+									"variable": [
+										{
+											"key": "project_id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"task at startDate and Endtime in the same project already exist\"\n}"
+						},
+						{
+							"name": "(400) Start Time Must Be Less Than End Time",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Task 3\",\r\n    \"description\": \"Finish the quarterly report by the end of the year.\",\r\n    \"startTime\": \"2024-07-10 18:20\",\r\n    \"endTime\": \"2024-07-10 19:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/projects/:project_id/tasks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":project_id",
+										"tasks"
+									],
+									"variable": [
+										{
+											"key": "project_id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"start time must be less than end time\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Tasks By Project Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/projects/:project_id/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"projects",
+								":project_id",
+								"tasks"
+							],
+							"variable": [
+								{
+									"key": "project_id",
+									"value": "66885c718952c51abf49117c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "(200) Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Task 1\",\r\n    \"description\": \"Finish the quarterly report by the end of the year.\",\r\n    \"startTime\": \"2024-07-10 17:00\",\r\n    \"endTime\": \"2024-07-10 18:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/projects/:project_id/tasks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":project_id",
+										"tasks"
+									],
+									"variable": [
+										{
+											"key": "project_id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 200,\r\n    \"message\": \"success\",\r\n    \"data\": [\r\n        {\r\n            \"_id\": \"66882b4bd674d117abf49f39\",\r\n            \"projectId\": \"668815c9bfce5f7bebe80c10\",\r\n            \"title\": \"Complete Report\",\r\n            \"description\": \"Finish the quarterly report by the end of the month.\",\r\n            \"startTime\": \"2024-07-10T02:00:00.000Z\",\r\n            \"endTime\": \"2024-07-10T10:00:00.000Z\",\r\n            \"createdAt\": \"2024-07-05T17:20:11.108Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"66882dee0296c439e0dffadd\",\r\n            \"projectId\": \"668815c9bfce5f7bebe80c10\",\r\n            \"title\": \"Task 2\",\r\n            \"description\": \"Finish the quarterly report by the end of the year.\",\r\n            \"startTime\": \"2024-07-10T10:00:00.000Z\",\r\n            \"endTime\": \"2024-07-10T11:00:00.000Z\",\r\n            \"createdAt\": \"2024-07-05T17:31:26.471Z\",\r\n            \"__v\": 0\r\n        }\r\n    ]\r\n}"
+						},
+						{
+							"name": "(404) Project Id Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Task 1\",\r\n    \"description\": \"Finish the quarterly report by the end of the year.\",\r\n    \"startTime\": \"2024-07-10 17:00\",\r\n    \"endTime\": \"2024-07-10 18:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/projects/:project_id/tasks",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"projects",
+										":project_id",
+										"tasks"
+									],
+									"variable": [
+										{
+											"key": "project_id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 404,\r\n    \"message\": \"project id not found\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Task 6\",\r\n    \"description\": \"Finish ...\",\r\n    \"startTime\": \"2024-07-10 09:00\",\r\n    \"endTime\": \"2024-07-10 10:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/tasks/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66885e95d1d575f565125cd5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "(200) Success Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Task 3\",\r\n    \"description\": \"Finish the quarterly report by the end of the year.\",\r\n    \"startTime\": \"2024-07-10 19:00\",\r\n    \"endTime\": \"2024-07-11 22:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/tasks/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"success update\",\n    \"data\": {\n        \"_id\": \"6688394e87e1609d47ab69c4\",\n        \"projectId\": \"668815c9bfce5f7bebe80c10\",\n        \"title\": \"Task 5\",\n        \"description\": \"Finish ...\",\n        \"startTime\": \"2024-07-10T12:00:00.000Z\",\n        \"endTime\": \"2024-07-10T15:00:00.000Z\",\n        \"createdAt\": \"2024-07-05T18:19:58.891Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "(400) Start Time Must Be Less Than End Time",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Task 3\",\r\n    \"description\": \"Finish the quarterly report by the end of the year.\",\r\n    \"startTime\": \"2024-07-10 19:00\",\r\n    \"endTime\": \"2024-07-11 22:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/tasks/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "668815c9bfce5f7bebe80c10"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"start time must be less than end time\"\n}"
+						},
+						{
+							"name": "(400) Start Time and End Time at The Same Project Already Exist",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Task 6\",\r\n    \"description\": \"Finish ...\",\r\n    \"startTime\": \"2024-07-10 07:00\",\r\n    \"endTime\": \"2024-07-10 08:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/tasks/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "668845fcede665421bc8fdc3"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"task at startDate and Endtime in the same project already exist\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Task By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tasks/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66885c718952c51abf49117c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "(200) Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/tasks/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66882d9061cc55870f44488a"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 200,\r\n    \"message\": \"success delete\"\r\n}"
+						},
+						{
+							"name": "(404) Data Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/tasks/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66882dee0296c439e0dffadd"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"code\": 404,\r\n    \"message\": \"data not found\"\r\n}"
+						},
+						{
+							"name": "(500) Internal Server Error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/tasks/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"tasks",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "66882d9061cc55870f44488e"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 500,\n    \"message\": \"Cast to ObjectId failed for value \\\":id\\\" (type string) at path \\\"_id\\\" for model \\\"projects_tasks\\\"\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
